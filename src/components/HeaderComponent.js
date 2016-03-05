@@ -7,8 +7,7 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <AppBar
-        title="Antate"
-        iconElementLeft={<span></span>} />
+        title="Antate" />
     );
   }
 }
