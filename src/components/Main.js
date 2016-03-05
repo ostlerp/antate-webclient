@@ -9,8 +9,11 @@ import ActionContainerComponent from './ActionContainerComponent';
 class AppComponent extends React.Component {
 
   render() {
+
+    console.log(this.props);
+
     return (
-      <MuiThemeProvider muiTheme={MyTheme}>
+      <MuiThemeProvider className="index" muiTheme={MyTheme}>
         <div className="index">
           <HeaderComponent />
 
@@ -22,6 +25,8 @@ class AppComponent extends React.Component {
     );
   }
 }
+
+AppComponent.displayName = 'AppComponent';
 
 AppComponent.defaultProps = {
 };

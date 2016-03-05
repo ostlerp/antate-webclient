@@ -6,8 +6,9 @@ import AppBar from 'material-ui/lib/app-bar';
 class HeaderComponent extends React.Component {
   render() {
     return (
-      <AppBar
-        title="Antate" />
+      <div className="header-component">
+        <AppBar title="Antate" />
+      </div>
     );
   }
 }

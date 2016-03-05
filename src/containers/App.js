@@ -14,8 +14,8 @@ import Main from '../components/Main';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    const {actions, annotations} = this.props;
-    return <Main actions={actions} annotations={annotations}/>;
+    const {actions, annotations, actionContainer} = this.props;
+    return <Main actions={actions} annotations={annotations} actionContainer={actionContainer}/>;
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -25,16 +25,20 @@ class App extends Component {
  */
 App.propTypes = {
   actions: PropTypes.object.isRequired,
-  annotations: PropTypes.object.isRequired
+  annotations: PropTypes.object.isRequired,
+  actionContainer: PropTypes.object.isRequired
 };
 function mapStateToProps(state) {
   /* Populated by react-webpack-redux:reducer */
-  const props = { annotations: state.annotations };
+  const props = {
+    annotations: state.annotations,
+    actionContainer: state.actionContainer
+  };
   return props;
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
+  const actions = { toggleActionContainer: require('../actions/toggleActionContainer.js') };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }
