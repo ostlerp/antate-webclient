@@ -1,0 +1,20 @@
+.actioncontainer-component {
+  flex: 0 1 100px;
+  background-color: #282c37;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+
+  .action {
+    padding: 20px 0;
+  }
+
+  .action:hover {
+    cursor:pointer;
+  }
+
+  .action-spacer {
+    flex: 1;
+  }
+}

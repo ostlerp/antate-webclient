@@ -14,8 +14,8 @@ import Main from '../components/Main';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    const {actions} = this.props;
-    return <Main actions={actions}/>;
+    const {actions, annotations} = this.props;
+    return <Main actions={actions} annotations={annotations}/>;
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -24,11 +24,12 @@ class App extends Component {
  *       adjust it here.
  */
 App.propTypes = {
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  annotations: PropTypes.object.isRequired
 };
 function mapStateToProps(state) {
   /* Populated by react-webpack-redux:reducer */
-  const props = {};
+  const props = { annotations: state.annotations };
   return props;
 }
 function mapDispatchToProps(dispatch) {

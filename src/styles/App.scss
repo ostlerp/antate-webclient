@@ -1,0 +1,16 @@
+/* Base Application Styles */
+body, html, #app, .index, .content {
+  margin:0;
+  width: 100%;
+  height: 100%;
+}
+.index{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+
+  .content {
+    display:flex;
+  }
+}
