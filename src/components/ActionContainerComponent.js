@@ -3,25 +3,31 @@
 import React from 'react';
 import FontIcon from 'material-ui/lib/font-icon';
 import IconButton from 'material-ui/lib/icon-button';
+import LeftNav from 'material-ui/lib/left-nav';
 
 require('styles//ActionContainer.scss');
 
 const iconStyles = {
   fontSize: '6vw',
-  margin: '0 15px',
-  color: 'white'
+  color: 'white',
+  margin: '0 20px',
 };
 
 const buttonStyles = {
   width: '100%',
-  height: '100%'
+  margin: '1.75vw 0'
 };
 
 
 class ActionContainerComponent extends React.Component {
   render() {
+
+    let componentClass = 'actioncontainer-component';
+
+    componentClass += this.props.isOpen ? ' open' : ' collapsed';
+
     return (
-      <div className="actioncontainer-component">
+      <div className={componentClass}>
 
         <IconButton style={buttonStyles} iconStyle={iconStyles} >
           <FontIcon className="material-icons action-icon">add_a_photo</FontIcon>

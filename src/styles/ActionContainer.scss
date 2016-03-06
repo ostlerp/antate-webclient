@@ -3,11 +3,23 @@
   display:flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 20px;
+  padding: 20px 0;
 
   .action-spacer {
     flex: 1;
   }
+}
+
+.actioncontainer-component.collapsed {
+  animation-duration: .35s;
+  animation-name: slideout;
+  margin-left: -200px;
+}
+
+.actioncontainer-component.open {
+  animation-duration: .35s;
+  animation-name: slidein;
+  margin-left: 0%;
 }
 
 @media (min-width: 1000px) {
@@ -19,5 +31,25 @@
 @media(max-width: 600px){
   .action-icon {
     font-size: 36px !important;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -200px;
+  }
+
+  to {
+    margin-left:0%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: -200px;
   }
 }

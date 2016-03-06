@@ -15,7 +15,7 @@ module.exports = function(state = initialState, action) {
       return Object.assign({}, state, {
         isOpen: !state.isOpen
       });
-    } break;
+    }
     default: {
       /* Return original state if no actions were consumed. */
       return state;

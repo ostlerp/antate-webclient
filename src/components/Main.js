@@ -9,16 +9,13 @@ import ActionContainerComponent from './ActionContainerComponent';
 class AppComponent extends React.Component {
 
   render() {
-
-    console.log(this.props);
-
     return (
       <MuiThemeProvider className="index" muiTheme={MyTheme}>
         <div className="index">
-          <HeaderComponent />
+          <HeaderComponent toggleActions={this.props.actions.toggleActionContainer} />
 
           <div className="content">
-            <ActionContainerComponent />
+            <ActionContainerComponent isOpen={this.props.actionContainer.isOpen} />
           </div>
         </div>
       </MuiThemeProvider>

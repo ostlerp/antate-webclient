@@ -19,6 +19,10 @@ let theme = getMuiTheme({
     primary3Color:          '#bdbdbd',
     shadowColor:            'rgba(0, 0, 0, 1)',
     textColor:              'rgba(0, 0, 0, 0.87)'
+  },
+  leftNav: {
+    color: "#282c37",
+    width: 115
   }
 });
 

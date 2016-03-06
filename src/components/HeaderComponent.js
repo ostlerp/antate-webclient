@@ -4,10 +4,11 @@ import React from 'react';
 import AppBar from 'material-ui/lib/app-bar';
 
 class HeaderComponent extends React.Component {
+
   render() {
     return (
       <div className="header-component">
-        <AppBar title="Antate" />
+        <AppBar title="Antate" onLeftIconButtonTouchTap={this.props.toggleActions} />
       </div>
     );
   }
